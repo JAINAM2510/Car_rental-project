@@ -71,8 +71,8 @@ namespace Car_Rental
                         break;
 
                     case 3:
-                        Console.WriteLine("Enter your driving liscense number");
-                        Char dId = Convert.ToChar(Console.ReadLine());
+                        Console.WriteLine("Enter your driving liscense number(Input only in number)");
+                       double dId =Convert.ToDouble( Console.ReadLine());
                         DrivingLis(dId);
                         break;
                     case 4:
@@ -88,7 +88,7 @@ namespace Car_Rental
                         Console.WriteLine("-----select colour----(type color of your car)\n" +
                             "1-red\n" +
                             "2-blue\n" +
-                            "3-white" +
+                            "3-white\n" +
                             "4-black");
                         string colorSelcted = Console.ReadLine();
                         colourSelect(colorSelcted);
@@ -141,7 +141,7 @@ namespace Car_Rental
             Console.WriteLine("Age saved");
         }
     }
-    public void DrivingLis(char _dl)
+    public void DrivingLis(double _dl)
     {
         data.Add(Convert.ToString("DRIVING LISCENSE NO:" + _dl));
         Console.WriteLine("Driving Liscense Number saved");
