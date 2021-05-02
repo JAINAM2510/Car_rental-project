@@ -29,7 +29,92 @@ namespace Car_Rental
     {
 
         List<String> data = new List<string>();//List
+    public void callMe()
+    {
+        #region MenuDrivenAppln
 
+
+        Console.WriteLine("..........................................");
+        Console.WriteLine("              ~ MENU ~                    ");
+        Console.WriteLine("..........................................");
+        Console.WriteLine("Enter all data by slecting option below \n");
+
+        Console.WriteLine(
+            "1-Username\n" +
+            "2-Age\n" +
+            "3-Driving Liscense Id\n" +
+            "4-select car to be rented\n" +
+            "5-select colour for car\n" +
+            "6-For many hours\n" +
+            "7-EXIT");
+
+        for (int i = 0; i <= 6; i++)
+        {
+            Console.WriteLine("Enter your choice in number(1 to 7):");
+            string select = Console.ReadLine();
+            #region switchcase(Menu)
+            try
+            {
+                int option = Convert.ToInt32(select);
+                switch (option)
+                {
+                    case 1:
+                        Console.WriteLine("Enter UserName");
+                        string username = Console.ReadLine();
+                        userName(username);
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Enter your Age");
+                        int Age = Convert.ToInt32(Console.ReadLine());
+                        age(Age);
+                        break;
+
+                    case 3:
+                        Console.WriteLine("Enter your driving liscense number");
+                        Char dId = Convert.ToChar(Console.ReadLine());
+                        DrivingLis(dId);
+                        break;
+                    case 4:
+                        Console.WriteLine("---Select your car---(type name of car)\n" +
+                            "1-ACCORD\n" +
+                            "2-AUDIR8\n" +
+                            "3-BMWX3");
+                        String carSelected = Console.ReadLine();
+                        carSelect(carSelected);
+
+                        break;
+                    case 5:
+                        Console.WriteLine("-----select colour----(type color of your car)\n" +
+                            "1-red\n" +
+                            "2-blue\n" +
+                            "3-white" +
+                            "4-black");
+                        string colorSelcted = Console.ReadLine();
+                        colourSelect(colorSelcted);
+                        break;
+                    case 6:
+                        Console.WriteLine("----for how many you hours you want car rental service------\n(Enter a decimal number representing hour)");
+                        String _rentTime = Console.ReadLine();
+                        rentForhours(_rentTime);
+
+                        break;
+                    default:
+                        System.Environment.Exit(0);
+                        break;
+                }
+            }
+#pragma warning disable CS0168 // Variable is declared but never used
+            catch (Exception e)
+#pragma warning restore CS0168 // Variable is declared but never used
+            {
+                Console.WriteLine("__________________ERROR__________________");
+                Console.WriteLine("Enter valid Number between (1 to 7)");
+            }
+            #endregion
+        }
+        #endregion
+    }
     public carRentals(string a)
     {
         callMe();
