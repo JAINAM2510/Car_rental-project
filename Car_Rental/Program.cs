@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace C_Sharp_Assignment_bittu
+namespace Car_Rental
 {
     class Program
     {
@@ -24,3 +24,10 @@ namespace C_Sharp_Assignment_bittu
             carRentals callClassCarrentals = new carRentals(Console.ReadLine());
         }
     }
+}
+    public class carRentals
+    {
+
+        List<String> data = new List<string>();//List
+    }
+
